@@ -2,7 +2,7 @@
 //  PrintBlockRefObject.m
 //  block打印所有引用的外部变量
 //
-//  Created by coder on 2019/9/17.
+//  Created by corder on 2019/9/17.
 //  Copyright © 2019 coder. All rights reserved.
 //
 
@@ -189,8 +189,8 @@ static NSString *block_description(id block, SEL _cmd) {
     int index = 0;
     int objOffest = sizeof(struct Block_layout);//block内部对象的偏移
     
-    char *typeArr[4] = {"strong","byref","weak","unretain"};
-    char *byrefTypeArr[3] = {"strong","weak","unretain"};
+    char *typeArr[4] = {"strong  ","byref   ","weak    ","unretain"};
+    char *byrefTypeArr[3] = {"__strong __block","__weak __block","__unsafe_unretained __block"};
     
     
     while (extendLayout[index] != '\0') {
