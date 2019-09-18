@@ -1,8 +1,8 @@
 //
 //  PrintBlockRefObject.m
-//  block打印所有引用的外部变量
+//  BlockExtendLayout
 //
-//  Created by corder on 2019/9/17.
+//  Created by coder on 2019/9/17.
 //  Copyright © 2019 coder. All rights reserved.
 //
 
@@ -248,7 +248,7 @@ static NSString *block_description(id block, SEL _cmd) {
                 }
                 
                 if (byrefObjCount == 0) {
-                    [printStr appendString:@"无"];
+                    [printStr appendString:@"无__block修饰的对象"];
                 }
                 
             }
